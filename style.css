@@ -1,4 +1,4 @@
-html, body {
+html, body, .container {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -6,8 +6,6 @@ html, body {
 
 /* This is a fixed size formatting approach on the header, footer, and body */
 .header, .footer {
-  position: absolute;
-  width: 1024px;
   background: steelblue;
   border: 1px;
   margin: 0;
@@ -15,7 +13,6 @@ html, body {
 }
 
 .header {
-  height: 60px;
   text-align: center;
 }
 
@@ -25,9 +22,21 @@ html, body {
 
 .content-body {
   background-color: forestgreen;
-  height: 600px;
-  width: 1024px;  
   min-height: 400px;
   margin: 0;
   padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+}
+
+.flex_fixed {
+    flex: none;
+}
+
+.flex_expand {
+    flex: auto;
 }
